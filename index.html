@@ -1,54 +1,28 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title>Redirección al escanear un código QR</title>
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-  <script src="https://cdn.jsdelivr.net/npm/qr-scanner/qr-scanner.min.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="./Css/style.css">
+    <title>Codigo qr</title>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
 </head>
-
 <body>
-  <!-- <div id="qr-code"></div> -->
+    <div id="qrcode"></div>
 
-  <!-- <img src="./Img/images.jpg" alt="Imagen" class="image" height="50%" width="90%"> -->
+    <script>
+        function generateQRCode() {
+            const phoneNumber = "3506304904"; // Aquí coloca el número deseado
 
-  <!-- Header -->
-  <div class="w3-top">
-    <div class="w3-bar w3-white w3-card" id="myNavbar">
-      <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-envelope"></i> CONTACT</a>
-    </div>
-  </div>
+            // Enlace para realizar la llamada telefónica
+            const callLink = `tel:${phoneNumber}`;
 
-  <!-- Informacion" -->
-  <div class="w3-container custom-lila" style="padding:128px 16px">
-    <div class="w3-row-padding">
-      <div class="w3-col m5 w3-center">
-        <h3>¡HOLA, ME LLAMO VENUS!</h3>
-        <p>Por favor, si me llego a perder y me encuentras, puedes contactar a <b>Paola Andrea</b>. Quien es la persona responsable de mí</p>
-        <p>¡GRACIAS POR AYUDARME!</p>
-        <p><a href="#" class="w3-button w3-black"><i class="fa fa-whatsapp w3-hover-opacity"></i> Contactame</a></p>
-      </div>
-      <div class="w3-col m6 w3-center">
-        <img class="w3-image w3-round-large" src="./Img/images.jpg" alt="Buildings" width="700" height="394">
-      </div>
-    </div>
-  </div>
+            // Generar el código QR con el enlace de llamada
+            const qrcode = new QRCode(document.getElementById("qrcode"), {
+                text: callLink,
+                width: 400,
+                height: 400
+            });
+        }
 
-  <footer class="w3-center w3-black w3-padding-18">
-    <div class="w3-xlarge w3-section">
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-      <i class="fa fa-whatsapp w3-hover-opacity"></i>
-    </div>
-    <p>Hecho por Paola</p>
-  </footer>
-
-  <!-- <script src="./Js/script.js"></script> -->
+        generateQRCode();
+    </script>
 </body>
-
 </html>
