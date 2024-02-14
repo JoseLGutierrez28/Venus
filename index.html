@@ -1,28 +1,68 @@
-<!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
-    <title>Codigo qr</title>
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <title>Venus</title>
+    <!------------------------- styles css  and icon------------------->
+    <link type="text/css" rel="stylesheet" href="./css/fontawesome/css/all.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css"><!--Version-->
 </head>
+
 <body>
-    <div id="qrcode"></div>
+    <div class="main-container">
+        <div class="second-container">
+            <div class="three-section"></div>
 
-    <script>
-        function generateQRCode() {
-            const phoneNumber = "3506304904"; // Aquí coloca el número deseado
+            <div class="three-section">
 
-            // Enlace para realizar la llamada telefónica
-            const callLink = `tel:${phoneNumber}`;
+                <div class="tab-container headercard scroll">
+                    <div class="profile-img">
+                        <img class="imagemascota" src="./Img/venus.jpeg" alt="imagen de la mascota">
 
-            // Generar el código QR con el enlace de llamada
-            const qrcode = new QRCode(document.getElementById("qrcode"), {
-                text: callLink,
-                width: 400,
-                height: 400
-            });
-        }
+                    </div>
+                    <div class="info-profile">
+                        <div class="">
+                            <h1 class="titulo">
+                                Venus</h1>
+                        </div>
+                        <div class="container-icons">
 
-        generateQRCode();
-    </script>
+                            <div class=""><i class="fas fa-dog iconsdescripcion"></i><span>Perra</span></div>
+
+                            <div class=""><i class="fas fa-venus iconsdescripcion"></i><span>Hembra</span></div>
+
+                            <div class="">
+                                <i class="far fa-times-circle iconsdescripcion"></i>
+                                <!-- <i class="far fa-check-circle"></i> -->
+                                <span>Esterilizada</span>
+                            </div>
+
+                            <div class=""><i class="fa-solid fa-3 iconsdescripcion"></i><span>Años</span></div>
+
+                        </div>
+
+                        <p class="descripcion-mascota">
+                            Hola, me llamo Venus.
+                            <br><br>
+                            Por favor, si me llego a perder y me encuentras, puedes contactar a
+                            <b> Paola, </b>
+                            quien es la persona responsable de mí!
+                        </p>
+                        <div class="">
+                            <div class="linea-top-call"></div>
+                            <span>Contactar responsable</span>
+                        </div>
+                        <div class="container-contactme">
+                            <i class="fas fa-phone-alt go-rrss ph icons-contactme"></i>
+                            <i class="fab fa-whatsapp go-rrss wa icons-contactme"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
