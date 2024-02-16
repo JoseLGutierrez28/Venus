@@ -79,7 +79,6 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(225deg, #184a67, #1d587a);
 }
 
 .imagemascota {
@@ -145,10 +144,6 @@ body {
 }
 
 .icons-contactme {
-  box-shadow: -2px 2px 8px 0px #00000099, 1px -1px 1px -1px #ffffff99;
-}
-
-.icons-contactme {
   position: relative;
   font-size: 25px;
   border-radius: 10px;
@@ -161,4 +156,6 @@ body {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   width: calc(50% - 15px);
+  box-shadow: -2px 2px 8px 0px #00000099, 1px -1px 1px -1px #ffffff99;
+
 }
