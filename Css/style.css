@@ -158,5 +158,6 @@ body {
   -webkit-tap-highlight-color: transparent;
   width: calc(50% - 15px);
   box-shadow: -2px 2px 8px 0px #00000099, 1px -1px 1px -1px #ffffff99;
-
+  text-decoration: none;
+  color: white;
 }
